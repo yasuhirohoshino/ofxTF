@@ -12,8 +12,8 @@ struct TFObject {
 
 class ofxTF {
 public:
-	void setup(int total);
-	void generate(string shaderPath);
+	void setup(int total, string shaderPath);
+	void generate();
 	void loadShader(string shaderPath);
 	void begin();
 	void end();
@@ -30,4 +30,5 @@ private:
 	int total;
 	ofShader shader;
 	vector<char*> feedbackVaryings;
+    string shaderPath;
 };

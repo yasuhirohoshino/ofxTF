@@ -1,11 +1,12 @@
 #include "ofxTF.h"
 
-void ofxTF::setup(int total)
+void ofxTF::setup(int total, string shaderPath)
 {
 	this->total = total;
+    this->shaderPath = shaderPath;
 }
 
-void ofxTF::generate(string shaderPath)
+void ofxTF::generate()
 {
 	loadShader(shaderPath);
 
@@ -33,6 +34,7 @@ void ofxTF::generate(string shaderPath)
 
 void ofxTF::loadShader(string shaderPath)
 {
+    this->shaderPath = shaderPath;
 	shader.setupShaderFromFile(GL_VERTEX_SHADER, shaderPath);
 	for (int i = 0; i < tfObjects.size(); i++) {
 		feedbackVaryings.push_back(tfObjects[i].outLocationName);
