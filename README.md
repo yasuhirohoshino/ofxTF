@@ -1,5 +1,5 @@
 # ofxTF
-transform feedback addon for openFrameworks
+transform feedback(https://www.opengl.org/wiki/Transform_Feedback) addon for openFrameworks
 
 -
 
